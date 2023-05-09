@@ -9,7 +9,7 @@
      border: none;
      text-decoration: none;
      text-transform: capitalize;
-     /* transition: .2s linear; */
+     transition: .2s linear;
      font-family: "Poppins", Arial, Helvetica, sans-serif;
  }
 
@@ -21,7 +21,7 @@
  }
 
  section {
-     padding: 10rem 5%;
+     padding: 2rem 9%;
  }
 
  /* NAVBAR START */
@@ -91,22 +91,7 @@
  /* NAVBAR END */
 
  /* MAİN */
- main {
-     margin-top: 50px;
- }
 
- .main-header {
-     position: fixed;
-     z-index: 1;
-     width: 100%;
-     top: 0;
- }
-
- .bg {
-     background-position: center;
-     background-size: cover;
-     background-attachment: fixed;
- }
 
  .home {
      display: flex;
@@ -150,9 +135,18 @@
 
  }
 
+
+ .bg {
+     background-position: center;
+     background-size: cover;
+     background-attachment: fixed;
+ }
+
+
  .bg-image2 {
      height: 50vh;
      background-image: url("./img/pexels-tara-winstead-7666487.jpg");
+
  }
 
  .box h2 {
@@ -163,88 +157,63 @@
      font-size: 1.7rem;
  }
 
- /* PRODUCT START  */
- .products .box-container {
-     display: flex;
-     flex-wrap: wrap;
-     gap: 1.5rem;
+ /* new product  */
+ .product-container {
+     padding: 15px 9%;
  }
 
- .products .box-container .box {
-     flex: 1 1 30rem;
-     box-shadow: 0 .5rem 1.5rem rgba(36, 34, 15, 0.2);
-     border-radius: .9rem;
-     border: .1rem solid rgba(182, 161, 41, 0.2);
-     position: relative;
- }
-
- .products .box-container .box .image {
-     position: relative;
+ .product-container .heading1 {
      text-align: center;
-     padding-top: 2rem;
-     overflow: hidden;
-     cursor: pointer;
+     padding: 20px;
+     color: #b68864;
+     font-size: 3rem;
  }
 
- .products .box-container .box .image img {
+ .product-container .productbox-container {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+     gap: 15px;
+
+
+ }
+
+ .product-container .productbox-container .productbox {
+     border-radius: 5px;
+     text-align: center;
+     padding: 30px 20px;
+     background: rgb(234, 234, 234);
+ }
+
+ .product-container .productbox-container .productbox img {
      height: 30rem;
  }
 
- .products .box-container .box:hover .image img {
-     transform: scale(1.1);
+ .product-container .productbox-container .productbox h3 {
+     color: #78461f;
+     font-size: 2rem;
  }
 
- .products .box-container .box .image .icons {
-     position: absolute;
-     bottom: -7rem;
-     left: 0;
-     right: 0;
-     display: flex;
-
- }
-
- .products .box-container .box:hover .image .icons {
-     bottom: 0;
- }
-
- .products .box-container .box .image .icons a {
-     height: 4rem;
-     line-height: 4rem;
-     font-size: 1.5rem;
-     width: 80%;
-     background-color: #b68864;
+ .product-container .productbox-container .btn-product {
+     display: inline-block;
      color: #fff;
-     margin-left: 15px;
-     border-radius: 18px;
+     background: #b68864;
+     font-size: 2rem;
+     padding: 8px;
+     border-radius: 30px;
  }
 
- .products .box-container .box .image .icons a:hover {
-     background-color: #673006;
-
+ .product-container .productbox-container .productbox .btn-product:hover {
+     letter-spacing: 1px;
  }
 
- .products .box-container .box .content {
-     padding: 2rem;
-     text-align: center;
+ .product-container .productbox-container .productbox:hover {
+     box-shadow: 0 10px 15px rgba(0, 0, 0, .3);
+     transform: scale(1.03);
  }
 
- .products .box-container .box .content h3 {
-     font-size: 2.5rem;
-     color: #333;
- }
 
- .products .box-container .box .content .price {
-     font-size: 2.5rem;
-     color: #431e01;
-     font-weight: bolder;
-     padding-top: 1rem;
-     border: 1px solid rgba(33, 25, 4, 0.1);
-     border-radius: 20px;
-     color: #b68864;
 
- }
-
- /* PRODUCT END  */
+ /* new end product 
 
  /* SLİDER START */
  .slider {
@@ -353,6 +322,10 @@
      font-size: 38px;
  }
 
+ .heading {
+     text-align: center;
+ }
+
  /* FOOTER */
 
  .footer {
@@ -360,17 +333,17 @@
      flex-direction: column;
      justify-content: center;
      align-items: center;
-     height: 200px;
+     height: 100px;
      background-color: #d19a70;
-     border-radius: 20px;
+
  }
 
  footer p {
-     color: #78461f;
+     color: #fff;
  }
 
  .social a {
-     margin-left: 13px;
+     margin-left: 3px;
  }
 
  footer a:hover {
@@ -488,5 +461,9 @@
          margin-bottom: 10px;
          border-color: #431e01;
 
+     }
+
+     .product-container {
+         padding: 20px;
      }
  }
